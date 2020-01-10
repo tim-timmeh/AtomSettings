@@ -1,0 +1,157 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+
+
+@import '../ui/elements/buttons.less';
+@import '../ui/elements/button-group.less';
+@import '../ui/elements/form.less';
+@import '../ui/elements/icons.less';
+@import '../ui/elements/radio.less';
+
+@import '../ui/components/auth-view/style.less';
+@import '../ui/components/modules-view/style.less';
+@import '../ui/components/console-view/style.less';
+@import '../ui/components/memory-view/style.less';
+@import '../ui/components/resizable-panel/style.less';
+@import '../ui/components/welcome-view/style.less';
+@import '../ui/components/branches-view/style.less';
+@import '../ui/components/create-project-view/style.less';
+@import '../ui/components/modal/style.less';
+
+@import '../src/components/screeps-status-bar/style.less';
+@import '../src/components/screeps-panel/style.less';
+
+.atom-package {
+}
+
+.icon-screeps__1,
+.icon-screeps__2 {
+  display: flex;
+  justify-content: center;
+
+  &::before {
+    content: '';
+
+    display: inline-block !important;
+    width: 36px;
+    height: 36px;
+
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    font-size: 16px;
+  }
+}
+
+//.directory[screeps-dist] > .header > .icon-file-directory::before {
+//    content: "\e900";
+//
+//    position: relative;
+//    top: 1px;
+//
+//    font-family: 'screepsicons' !important;
+//}
+
+.icon-screeps {
+  &::before {
+    content: "\e900";
+
+    font-family: 'screepsicons' !important;
+  }
+}
+
+.name.icon.icon-screeps {
+  &::before {
+    top: 1px;
+    left: -1px;
+    font-size: 1.5em;
+  }
+}
+
+.screeps-ide__status-bar {
+  float: left;
+  max-height: 30px;
+  margin: 0 10px;
+
+  cursor: pointer;
+
+  &::before {
+    font-size: 2em;
+    line-height: 30px;
+  }
+}
+
+.list-tree li.list-nested-item.status-modified--screeps > .list-item,
+.list-tree li:not(.list-nested-item).status-modified--screeps {
+    color: #568af2;
+}
+
+.tooltip.screeps-ide__tooltip {
+    .tooltip-inner {
+        padding: 5px;
+        background-color: #21252b;
+        border: 1px solid #181a1f;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: #9da5b4;
+    }
+
+    .tooltip-arrow {
+        width: 10px;
+        height: 10px;
+        border-width: 0 0 1px 1px;
+        border-color: #181a1f;
+        background-color: #21252b;
+        border-bottom-right-radius: 2px;
+        transform: rotate(-45deg);
+    }
+}
+
+.project-branch {
+    color: #568af2;
+    pointer-events: none;
+
+    &:before {
+        font-size: 16px;
+        top: -1px;
+        margin: 0 3px 0 15px;
+        vertical-align: middle;
+        position: relative;
+    }
+}
+
+[screeps-dist='screeps-dist'] .project-root-header > span:first-child {
+    pointer-events: none;
+}
+
+.tree-view .directory.hide-screepsiderc .name[data-path*='.screepsiderc'] {
+    display: none;
+}
+.tree-view .directory.hide-screepsiderc .name[data-path*='.tern-project'] {
+    display: none;
+}
+
+.tab-bar[is='atom-tabs'] li .title[data-path*='screeps-ide'] {
+    &:before {
+        content: "\e900";
+
+        position: relative;
+        top: 1px;
+
+        display: flex;
+        height: 30px;
+        align-items: center;
+        float: left;
+        margin-right: -30px;
+
+        font-family: 'screepsicons' !important;
+    }
+}
+
+.tab-bar[is='atom-tabs'] li.active .title[data-path*='screeps-ide'] {
+    &:before {
+        color: #568af2;
+    }
+}

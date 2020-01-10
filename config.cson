@@ -1,0 +1,17 @@
+"*":
+  core:
+    telemetryConsent: "no"
+  editor:
+    fontSize: 15
+    showIndentGuide: true
+  "exception-reporting":
+    userId: "be467877-2326-4925-bb97-3b5030e95487"
+  "linter-ui-default":
+    panelHeight: 198
+    showPanel: true
+  "screeps-ide":
+    global:
+      authToken: "798720a1-5b6a-4150-9003-97b9694bb24b"
+    showOnStartup: false
+  welcome:
+    showOnStartup: false

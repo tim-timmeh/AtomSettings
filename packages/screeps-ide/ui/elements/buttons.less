@@ -1,0 +1,137 @@
+.screeps-ide {
+    .btn {
+        &--clear {
+            border: none;
+            background: none;
+        }
+    }
+
+    .btn.btn--big {
+        justify-content: center;
+        box-sizing: border-box;
+        height: 38px;
+        width: 112px;
+
+        border: none;
+        border-radius: 2px;
+
+        cursor: pointer;
+        letter-spacing: 0.2px;
+        line-height: 17px;
+    }
+
+    .btn.btn--big[disabled] {
+        opacity: 0.65;
+    }
+
+    .btn.btn--big + .btn.btn--big {
+        margin-left: 20px;
+    }
+
+    .btn.btn--big.btn--primary {
+        background: rgba(89, 115, 255, 0.65);
+        box-shadow: 0 0 20px 0 rgba(89, 115, 255, 0.65);
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 600;
+        text-shadow: 0 0 40px 0 #5973ff;
+        transition: text-shadow;
+    }
+
+    .btn.btn--big.btn--primary:hover,
+    .btn.btn--big.btn--primary.btn--hover {
+        box-shadow: 0 0 20px 0 rgba(74, 95, 210, 0.65);
+    }
+
+    .btn.btn--big.btn--primary:focus,
+    .btn.btn--big.btn--primary.btn--focus {
+        box-shadow: 0 0 20px 0 rgba(74, 95, 210, 0.65);
+    }
+
+    .btn.btn--big.btn--transparent {
+        background: transparent;
+        color: rgba(89, 115, 255, 0.65);
+    }
+
+    .btn.btn--big.btn--transparent:hover,
+    .btn.btn--big.btn--transparent.btn--hover {
+        background: rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .close-icon,
+    .modified-icon {
+        z-index: 2;
+        position: absolute;
+        top: 0.5em;
+        right: 0.5em;
+
+        overflow: hidden;
+        width: 1.5em;
+        height: 1.5em;
+
+        border-radius: 3px;
+        background-color: inherit;
+
+        cursor: default;
+        font-size: 1em;
+        line-height: 1.5;
+        text-align: center;
+
+        transform: scale(0);
+        transition: transform .08s;
+    }
+
+    .close-icon {
+        &::before {
+            content: "\f081";
+
+            z-index: 1;
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+
+            font-family: 'Octicons Regular';
+            font-size: 1.1em;
+            font-weight: normal;
+            font-style: normal;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            text-decoration: none;
+            vertical-align: -0.05em;
+            pointer-events: none;
+        }
+
+        &:hover {
+            background-color: #568af2;
+
+            color: #001133;
+        }
+    }
+}
+
+.tab {
+    &.modified .modified-icon {
+        top: 0.5em;
+        right: 0.5em;
+        width: 1.5em;
+        height: 1.5em;
+        line-height: 1.5;
+        color: #568af2;
+        border-radius: 3px;
+        border: none;
+        transform: scale(1);
+    }
+
+    &.modified .modified-icon::before {
+        content: "\f052";
+
+        display: inline-block;
+
+        font-family: 'Octicons Regular';
+        font-size: 1.1em;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 1;
+    }
+}

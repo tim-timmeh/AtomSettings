@@ -1,0 +1,153 @@
+@import './components/jsoneditor.less';
+
+.screeps-memory {
+    &__view {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: 100px;
+
+        color: rgba(234, 237, 255, 0.7);
+        font-family: 'Segoe UI';
+        font-size: 12px;
+    }
+
+    &__controls {
+        box-sizing: content-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5px .8em;
+        min-height: 26px;
+
+        line-height: 20px;
+
+        div:first-child > select {
+            float: left;
+        }
+    }
+
+    &__segment-controls {
+        display: inline-flex;
+        align-items: center;
+        margin-left: 15px;
+
+        select {
+            margin-left: 5px;
+        }
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        &-items {
+            overflow: hidden;
+            overflow-y: auto;
+            overflow-y: overlay;
+            height: 100%;
+        }
+    }
+
+    &__segment {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        textarea {
+            height: 100%;
+            padding: 5px;
+
+            border: none;
+            background: none;
+            resize: none;
+
+            color: inherit;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &__item {
+        padding: 0 .8em;
+
+        border-bottom: 1px solid rgba(255, 255, 255, .1);
+
+        line-height: 20px;
+
+        &:hover .close-icon {
+            transform: scale(1);
+            transition-duration: .16s;
+        }
+    }
+
+    &__item-path {
+        position: sticky;
+        top: 0px;
+
+        float: left;
+        display: flex;
+        width: 50%;
+        height: 30px;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        line-height: 30px;
+
+        button.btn--clear {
+            display: none;
+        }
+
+        &:hover {
+            button.btn--clear {
+                display: inherit;
+            }
+        }
+    }
+
+    &__value {
+        display: flex;
+        width: 50%;
+        height: 30px;
+        margin-left: 50%;
+
+        border: 0;
+        background: transparent;
+
+        color: rgba(234, 237, 255, 0.7);
+
+        &:hover {
+            
+        }
+    }
+
+    &__json-editor {
+        width: 50%;
+        margin-left: 50%;
+    }
+
+    &__json-editor-controlls {
+        display: flex;
+        align-items: center;
+        padding: 3px 0;
+
+        span {
+            padding: 0 10px;
+
+            opacity: .5;
+            font-size: 11px;
+        }
+    }
+
+    &__input {
+        padding: 5px .8em;
+        margin-top: auto;
+
+        line-height: 20px;
+    }
+}

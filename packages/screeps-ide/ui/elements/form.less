@@ -1,0 +1,231 @@
+@text-color-fail: #D2554A;
+@text-color-warn: #FF9800;
+
+.screeps-ide {
+    form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        .error,
+        .warning {
+            position: absolute;
+            bottom: 10px;
+
+            display: block;
+            opacity: 0;
+
+            font-size: 12px;
+
+            transition: opacity .3s ease;
+        }
+
+        .error {
+            color: @text-color-fail;
+        }
+
+        .warning {
+            color: @text-color-warn;
+        }
+
+        &:not(.--indented) {
+            .error,
+            .warning {
+                bottom: -20px;
+            }
+        }
+
+        &.--invalid,
+        &.--warning {
+            .error,
+            .warning {
+                opacity: 1;
+            }
+        }
+
+        &.--invalid {
+            input  ~ .underline {
+                border-color: @text-color-fail;
+            }
+        }
+
+        &.--warning {
+            input  ~ .underline {
+                border-color: @text-color-warn;
+            }
+        }
+
+        &.--indented {
+            padding: 10px 0;
+
+            .screeps-field {
+                margin: 20px 0;
+            }
+        }
+
+        & > legend {
+            padding: 1px 0;
+
+            border: none;
+
+            pointer-events: none;
+            color: #d9dfff;
+            font-size: 1.14em;
+            white-space: pre-wrap;
+        }
+    }
+
+    .screeps-field {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        // margin: 20px 0;
+        margin: 0;
+        padding: 0;
+        border: none;
+
+        font-size: 12px;
+    }
+
+    .screeps-field input:not([type='checkbox']):not([type='radio']) {
+        width: 100%;
+        margin: 3px 0;
+
+        border: none;
+        background: none;
+
+        color: #ffffff;
+        font-size: 1em;
+        line-height: 1.28em;
+    }
+    .screeps-field input:focus {
+        outline: none;
+    }
+    .screeps-field input[type='checkbox'],
+    .screeps-field input[type='radio'] {
+        margin-top: 2px;
+        margin-right: 5px;
+    }
+
+    .screeps-field legend {
+        position: absolute;
+        top: -1.42em;
+
+        padding: 0;
+
+        border: none;
+
+        pointer-events: none;
+        color: #d9dfff;
+        font-size: 1.14em;
+        white-space: pre-wrap;
+
+        transition: top 0.3s ease, font-size 0.3s ease;
+    }
+
+    .screeps-field label {
+        display: flex;
+
+        color: #d9dfff;
+        font-size: 1.14em;
+        transition: top 0.3s ease, font-size 0.3s ease;
+    }
+
+    .screeps-field input + label {
+        position: absolute;
+        top: 0;
+
+        pointer-events: none;
+    }
+
+    .screeps-field input:focus ~ label,
+    .screeps-field input:valid ~ label,
+    .screeps-field input:disabled ~ label,
+    .screeps-field input:not(:placeholder-shown) ~ label {
+        top: -1.42em;
+        font-size: 1em;
+    }
+    .screeps-field input ~ .underline {
+        position: relative;
+        border-bottom: 1px solid #d9dfff;
+        transition: border-color .3s ease;
+    }
+    .screeps-field input ~ .underline:before {
+        content: '';
+        position: relative;
+        top: 1px;
+        display: block;
+        width: 0px;
+        margin: 0 auto;
+        border-bottom: 1px solid rgba(74, 95, 210, 0.65);
+        transition: width .3s ease;
+    }
+    .screeps-field input:not([readonly]):focus ~ .underline:before {
+        width: 100%;
+    }
+
+    .screeps-btn {
+        display: inline-flex;
+        align-items: center;
+        height: 32px;
+
+        padding: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+
+        border: none;
+        background: none;
+
+        cursor: pointer;
+        color: rgba(234, 237, 255, 0.7);
+        line-height: 32px;
+        text-align: left;
+        white-space: nowrap;
+
+        &:hover {
+            box-shadow: inset 1px 1px 100px rgba(255, 255, 255, .5)
+        }
+        
+        &:focus {
+            outline: none;
+        }
+    }
+
+    hr.screeps-hr {
+        height: 1px;
+        min-height: 1px;
+        margin: 0;
+
+        border: 0;
+        background: rgba(74, 95, 210, 0.65);
+    }
+
+    hr.screeps-hr--inprogress {
+        &::after {
+            content: '';
+
+            position: relative;
+
+            display: block;
+            width: 30%;
+            height: 1px;
+
+            background: rgba(105, 128, 255, 1);
+
+            animation: screepsHrInprogressAnimation infinite 1.5s;
+        }
+    }
+
+    .--italic {
+        font-style: italic;
+    }
+}
+
+@keyframes screepsHrInprogressAnimation {
+    0% {
+        left: -30%;
+    }
+    100% {
+        left: 100%;
+    }
+}

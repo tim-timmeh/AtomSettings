@@ -1,0 +1,169 @@
+{
+  "_from": "https://www.atom.io/api/packages/screeps-ide/versions/0.1.3/tarball",
+  "_id": "screeps-ide@0.1.3",
+  "_inBundle": false,
+  "_integrity": "sha512-MpXwaxJZZEMDT8fvbJALb5aHQ9wObiXy0VM5rz7oHV7w8m5YSN4myI4VwN74ozCMHJLjDpUyaTeD1x9LP5ie7Q==",
+  "_location": "/screeps-ide",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/screeps-ide/versions/0.1.3/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/screeps-ide/versions/0.1.3/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/screeps-ide/versions/0.1.3/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/screeps-ide/versions/0.1.3/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/screeps-ide/versions/0.1.3/tarball",
+  "_shasum": "d2489ddb1ba77b3fea8f019fb71cae5883cb89b1",
+  "_spec": "https://www.atom.io/api/packages/screeps-ide/versions/0.1.3/tarball",
+  "_where": "C:\\Users\\w38052\\AppData\\Local\\Temp\\apm-install-dir-12009-25792-1sjaixk.ow4fi",
+  "activationHooks": [
+    "core:loaded-shell-environment"
+  ],
+  "author": {
+    "name": "Artem Chivchalov",
+    "email": "contact@screeps.com"
+  },
+  "bugs": {
+    "url": "https://github.com/screeps/ide/issues"
+  },
+  "bundleDependencies": false,
+  "configSchema": {
+    "showOnStartup": {
+      "type": "boolean",
+      "default": true,
+      "description": "Show welcome panes with useful information when opening a new Atom window."
+    },
+    "showProjectConfig": {
+      "type": "boolean",
+      "default": false,
+      "description": "Show hidden config files in local projects."
+    },
+    "global": {
+      "title": "Common",
+      "type": "object",
+      "order": 1,
+      "properties": {
+        "apiUrl": {
+          "title": "Server API URL",
+          "description": "",
+          "type": "string",
+          "default": "https://screeps.com/api",
+          "order": 1
+        },
+        "websocketUrl": {
+          "title": "Server socket URL",
+          "description": "",
+          "type": "string",
+          "default": "https://screeps.com/socket",
+          "order": 2
+        },
+        "authToken": {
+          "title": "Auth token",
+          "description": "",
+          "type": "string",
+          "default": "",
+          "order": 3
+        },
+        "src": {
+          "title": "Project folder",
+          "description": "",
+          "type": "string",
+          "default": "./",
+          "order": 4
+        }
+      }
+    }
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    },
+    "tree-view": {
+      "versions": {
+        "^1.0.0": "consumeTreeView"
+      }
+    }
+  },
+  "dependencies": {
+    "atom-package-deps": "^5.1.0",
+    "jsoneditor": "^5.28.2",
+    "pako": "^1.0.8",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "rxjs": "^6.3.3",
+    "sockjs-client": "^1.3.0"
+  },
+  "deprecated": false,
+  "description": "IDE for Screeps - MMO RTS sandbox game for programmers",
+  "deserializers": {
+    "ConsolePanel": "deserializeConsolePanel",
+    "MemoryPanel": "deserializeMemoryPanel",
+    "ScreepsPanel": "deserializeScreepsPanel"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-links": "^5.1.9",
+    "@storybook/addons": "^5.1.9",
+    "@storybook/react": "^5.1.9",
+    "@storybook/theming": "^5.1.9",
+    "@types/atom": "^1.31.0",
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "@types/react": "^16.8.17",
+    "@types/react-dom": "^16.8.4",
+    "@types/sockjs-client": "^1.1.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.5.2",
+    "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.4.1",
+    "optimize-css-assets-webpack-plugin": "^4.0.3",
+    "resolve-url-loader": "^2.3.0",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^0.21.0",
+    "ts-loader": "^5.3.2",
+    "typescript": "^3.2.2",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.1.5"
+  },
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/screeps/ide#readme",
+  "keywords": [],
+  "license": "ISC",
+  "main": "./dist/src/index",
+  "name": "screeps-ide",
+  "package-deps": [
+    "atom-ternjs-screeps"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/screeps/ide.git"
+  },
+  "scripts": {
+    "build": "tsc --project ./tsconfig.atom.json",
+    "build-storybook": "build-storybook",
+    "serve:ui": "webpack-dev-server --config ./webpack/webpack.dev.js",
+    "storybook": "start-storybook -p 6006",
+    "watch": "tsc --watch --project ./tsconfig.atom.json"
+  },
+  "uriHandler": {
+    "method": "handleURI"
+  },
+  "version": "0.1.3"
+}

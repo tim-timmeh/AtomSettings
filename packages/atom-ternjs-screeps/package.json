@@ -1,0 +1,94 @@
+{
+  "_from": "https://www.atom.io/api/packages/atom-ternjs-screeps/versions/1.21.0/tarball",
+  "_id": "atom-ternjs-screeps@1.21.0",
+  "_inBundle": false,
+  "_integrity": "sha512-AiwtvBqu4UFN8t1OEhZZDwEx+dsxF1KTKnOcb8syW4WtHQKsklgH/38/URtKHbthmzF5coVU6LT7jmpqlrptMw==",
+  "_location": "/atom-ternjs-screeps",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/atom-ternjs-screeps/versions/1.21.0/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/atom-ternjs-screeps/versions/1.21.0/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/atom-ternjs-screeps/versions/1.21.0/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/atom-ternjs-screeps/versions/1.21.0/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/atom-ternjs-screeps/versions/1.21.0/tarball",
+  "_shasum": "68a4459df7a8ac4d9d36afc76ae22f479281557e",
+  "_spec": "https://www.atom.io/api/packages/atom-ternjs-screeps/versions/1.21.0/tarball",
+  "_where": "C:\\Users\\w38052\\AppData\\Local\\Temp\\apm-install-dir-12009-6076-5y6bxk.wmw8l",
+  "activationCommands": {
+    "atom-workspace": [
+      "atom-ternjs:openConfig"
+    ]
+  },
+  "activationHooks": [
+    "language-javascript:grammar-used",
+    "language-babel:grammar-used",
+    "language-vue:grammar-used"
+  ],
+  "bugs": {
+    "url": "https://github.com/screeps/atom-ternjs/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "atom-package-deps": "^5.1.0",
+    "event-kit": "^2.2.0",
+    "glob": "^7.1.4",
+    "loophole": "^1.1.0",
+    "minimatch": "^3.0.4",
+    "resolve-from": "^5.0.0",
+    "tern": "^0.24.1",
+    "tern-screeps": "0.0.2",
+    "underscore-plus": "^1.7.0",
+    "uuid": "^3.3.2"
+  },
+  "deprecated": false,
+  "description": "JavaScript code intelligence for atom with tern. Adds support for ES5, ES6, ES7, ES8, Node.js and more. Extendable via plugins.",
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.1.0",
+    "eslint-plugin-babel": "^5.3.0"
+  },
+  "engines": {
+    "atom": ">=1.13.0"
+  },
+  "homepage": "https://github.com/screeps/atom-ternjs#readme",
+  "keywords": [
+    "javascript",
+    "autocomplete-plus",
+    "autocomplete",
+    "node",
+    "es6",
+    "javascript-2015",
+    "jquery",
+    "tern"
+  ],
+  "license": "MIT",
+  "main": "./lib/atom-ternjs",
+  "name": "atom-ternjs-screeps",
+  "package-deps": [
+    "hyperclick"
+  ],
+  "private": false,
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+        "2.0.0": "provide"
+      }
+    },
+    "hyperclick.provider": {
+      "versions": {
+        "0.0.0": "provideHyperclick"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/screeps/atom-ternjs.git"
+  },
+  "version": "1.21.0"
+}

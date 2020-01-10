@@ -1,0 +1,40 @@
+{
+    "context-menu": {
+        ".tree-view [screeps-dist]": [
+            { "type": "separator" },
+
+            {
+                "label": "Screeps",
+                "submenu": [
+                    { "label": "Fetch", "command": "screeps-ide:fetch" },
+                    { "label": "Commit", "command": "screeps-ide:commit" },
+                    { "label": "Change Branch", "command": "screeps-ide:changeProjectBranch" }
+                ]
+            },
+
+            { "type": "separator" }
+        ]
+
+    },
+
+    "menu": [
+        {
+            "label": "Packages",
+            "submenu": [
+                {
+                    "label": "Screeps",
+                    "submenu": [
+                        { "label": "Branches", "command": "screeps-ide:branches" },
+                        { "label": "Console", "command": "screeps-ide:console" },
+                        { "label": "Memory", "command": "screeps-ide:memory" },
+
+                        { "type": "separator" },
+
+                        { "label": "Fetch", "command": "screeps-ide:fetch" },
+                        { "label": "Commit", "command": "screeps-ide:commit" }
+                    ]
+                }
+            ]
+        }
+    ]
+}
